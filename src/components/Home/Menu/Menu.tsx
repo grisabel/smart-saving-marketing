@@ -1,6 +1,6 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, $ } from "@builder.io/qwik";
 
-export const QAs = component$(() => {
+export const Menu = component$(() => {
   // useStyle$(stlyles) //como un decorador de angular
 
   // const menu = useSignal<{label: string, route: string}[]>([])
@@ -16,8 +16,16 @@ export const QAs = component$(() => {
   // })
 
   return (
-    <div>
-      <h1 id="qas">QAs</h1>
-    </div>
+    <ul>
+      <li>
+        <a href="#features">Features</a>
+      </li>
+      <li>
+        <a href="#qas">QAs</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
   );
 });

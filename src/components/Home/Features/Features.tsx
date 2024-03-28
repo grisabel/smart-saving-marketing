@@ -22,7 +22,8 @@ export const Features = component$(() => {
 
   return (
     <div class="features">
-      Features
+      <h1 id="features">Features</h1>
+
       <p>{t("app.test")}</p>
     </div>
   );
