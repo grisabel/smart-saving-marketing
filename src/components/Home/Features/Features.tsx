@@ -1,9 +1,12 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 
-import styles from './Features.scss?inline';
+import styles from "./Features.scss?inline";
+import i18n from "~/i18n";
 
 export const Features = component$(() => {
-    useStylesScoped$(styles) 
+  useStylesScoped$(styles);
+
+  const { t } = i18n;
 
   // const menu = useSignal<{label: string, route: string}[]>([])
 
@@ -17,5 +20,10 @@ export const Features = component$(() => {
   //     ]
   // })
 
-  return <div class="features">Features</div>;
+  return (
+    <div class="features">
+      Features
+      <p>{t("app.test")}</p>
+    </div>
+  );
 });
