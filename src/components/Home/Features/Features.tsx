@@ -1,6 +1,6 @@
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 
-import styles from './Features.css?inline';
+import styles from './Features.scss?inline';
 
 export const Features = component$(() => {
     useStylesScoped$(styles) 
