@@ -19,7 +19,8 @@ export default defineConfig((): UserConfig => {
     },
     resolve: {
       alias: {
-        '@styles': path.resolve(__dirname, 'src/styles')
+        '@styles': path.resolve(__dirname, 'src/styles'),
+        '@': path.resolve(__dirname, './src')
       }
     }
   };
