@@ -3,6 +3,10 @@
   align-items: flex-end;
   position: relative;
 
+  img {
+    min-width: 150px;
+    min-height: 80px;
+  }
   .logoTitle {
     position: absolute;
     left: 120px;
@@ -23,4 +27,7 @@
       font-size: 17px;
     }
   }
+}
+.logo:hover {
+  transform: scale(1.1);
 }
