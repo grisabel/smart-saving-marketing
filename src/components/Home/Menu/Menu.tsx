@@ -1,8 +1,8 @@
 import { component$, $ } from "@builder.io/qwik";
+import styles from "./Menu.module.scss";
+import Logo from "./components/Logo";
 
 export const Menu = component$(() => {
-  // useStyle$(stlyles) //como un decorador de angular
-
   // const menu = useSignal<{label: string, route: string}[]>([])
 
   // const handlerAddItem = $(() => {
@@ -16,16 +16,19 @@ export const Menu = component$(() => {
   // })
 
   return (
-    <ul>
-      <li>
-        <a href="#features">Features</a>
-      </li>
-      <li>
-        <a href="#qas">QAs</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
+    <div class={styles.header}>
+      <Logo />
+      <ul class={styles.menuWp}>
+        <li class={styles.menuItem}>
+          <a href="#features">Features</a>
+        </li>
+        <li class={styles.menuItem}>
+          <a href="#qas">QAs</a>
+        </li>
+        <li class={styles.menuItem}>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
   );
 });

@@ -15,7 +15,10 @@ export const Contact = component$(() => {
   //     ]
   // })
 
-  return <div>
-    <h1 id="contact">Contact</h1>
-  </div>;
+  return (
+    <div>
+      <h1 id="contact">Contact</h1>
+     
+    </div>
+  );
 });
