@@ -9,16 +9,16 @@ import { Menu } from "~/components/Home/Menu/Menu";
 export default component$(() => {
   return (
     <>
-    <Menu/>
-    <Features/>
-    <QAs/>
-    <Contact/>
+      <Menu />
+      <Features />
+      <QAs />
+      <Contact />
     </>
   );
 });
 
 export const head: DocumentHead = {
-  title: "Welcome to Qwik",
+  title: "Smart Savings",
   meta: [
     {
       name: "description",
