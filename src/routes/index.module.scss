@@ -1,0 +1,10 @@
+@import "@styles/variables/breakpoints.scss";
+@import "@styles/variables/fonts.scss";
+
+.contentWp {
+  position: relative;
+  top: 205px;
+  @media (min-width: 601px) {
+    top: 150px;
+  }
+}

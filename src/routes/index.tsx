@@ -5,14 +5,17 @@ import { Features } from "~/components/Home/Features/Features";
 import { QAs } from "~/components/Home/QAs/QAs";
 import { Contact } from "~/components/Home/Contact/Contact";
 import { Menu } from "~/components/Home/Menu/Menu";
+import styles from "./index.module.scss";
 
 export default component$(() => {
   return (
     <>
       <Menu />
-      <Features />
-      <QAs />
-      <Contact />
+      <div class={styles.contentWp}>
+        <Features />
+        <QAs />
+        <Contact />
+      </div>
     </>
   );
 });
