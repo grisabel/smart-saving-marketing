@@ -1,0 +1,10 @@
+@import "@styles/variables/fonts.scss";
+@import "@styles/variables/breakpoints.scss";
+.qas {
+  .faqContainer {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
