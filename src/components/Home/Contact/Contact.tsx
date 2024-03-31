@@ -3,6 +3,7 @@ import InputBase from "../../stories/atoms/Inputs/InputBase";
 import InputText from "../../stories/atoms/Inputs/InputText";
 import InputTextEmail from "../../stories/atoms/Inputs/InputTextEmail";
 import Button from "~/components/stories/atoms/Buttons/Button";
+import InputTextArea from "~/components/stories/atoms/Inputs/InputTextArea";
 
 export const Contact = component$(() => {
   // useStyle$(stlyles) //como un decorador de angular
@@ -26,6 +27,7 @@ export const Contact = component$(() => {
       <InputText label="label" placeholder="placeholder" />
       <InputTextEmail label="label" placeholder="placeholder" />
       <Button label="hola"/>
+      <InputTextArea label="label" placeholder="placeholder"/>
     </div>
   );
 });
