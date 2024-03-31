@@ -1,6 +1,7 @@
 import { component$ } from "@builder.io/qwik";
 import InputBase from "./component/InputBase";
 import InputText from "./component/InputText";
+import InputTextEmail from "./component/InputTextEmail";
 
 export const Contact = component$(() => {
   // useStyle$(stlyles) //como un decorador de angular
@@ -22,6 +23,7 @@ export const Contact = component$(() => {
       <h1 id="contact">Contact</h1>
       <InputBase type="text" label="label" placeholder="placeholder" />
       <InputText label="label" placeholder="placeholder" />
+      <InputTextEmail label="label" placeholder="placeholder" />
     </div>
   );
 });
