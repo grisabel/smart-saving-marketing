@@ -1,7 +1,7 @@
 import { component$ } from "@builder.io/qwik";
-import InputBase from "./component/InputBase";
-import InputText from "./component/InputText";
-import InputTextEmail from "./component/InputTextEmail";
+import InputBase from "../../stories/atoms/Inputs/InputBase";
+import InputText from "../../stories/atoms/Inputs/InputText";
+import InputTextEmail from "../../stories/atoms/Inputs/InputTextEmail";
 
 export const Contact = component$(() => {
   // useStyle$(stlyles) //como un decorador de angular
