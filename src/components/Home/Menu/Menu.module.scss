@@ -4,9 +4,9 @@
 .header {
   display: flex;
   align-items: center;
-  padding: 16px;
+
   position: static;
-  gap: 32px;
+
   flex-wrap: wrap;
   position: fixed;
   top: 0;
@@ -14,11 +14,13 @@
   background-color: white;
   width: 100%;
   border-bottom: 1px solid #ccc;
-  height: 205px;
+  height: 120px;
+  z-index: 1;
+
   @media (min-width: 601px) {
-    gap: 137px;
-    height: 150px;
-    padding: 32px;
+    height: 85px;
+    align-items: flex-end;
+    column-gap: 70px;
   }
   .menuWp {
     display: flex;
@@ -30,6 +32,7 @@
       min-width: 0;
       justify-content: left;
       width: auto;
+      padding-bottom: 9px;
     }
     @include f--b1-regular;
     color: var(--grey-main);
