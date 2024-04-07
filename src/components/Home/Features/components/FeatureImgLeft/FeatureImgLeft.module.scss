@@ -3,7 +3,7 @@
     display: flex;
     gap:32px;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 
     .featureData {
         max-width: 69%;
