@@ -1,4 +1,4 @@
-import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 import DropDown from "./components/drop-down";
 import { en } from "~/i18n/en";
 import { es } from "~/i18n/es";

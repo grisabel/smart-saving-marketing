@@ -1,12 +1,12 @@
-import { component$, useStylesScoped$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
 
-import styles from "./Features.scss?inline";
-import i18n from "~/i18n";
+import styles from "./Features.module.scss";
+import { en } from "~/i18n/en";
+import { es } from "~/i18n/es";
+import { useLanguage } from "~/hooks/useLanguage";
 
 export const Features = component$(() => {
-  useStylesScoped$(styles);
-
-  const { t } = i18n;
+  const { lang } = useLanguage();
 
   // const menu = useSignal<{label: string, route: string}[]>([])
 
@@ -21,10 +21,8 @@ export const Features = component$(() => {
   // })
 
   return (
-    <div class="features">
-      <h1 id="features">Features</h1>
-
-      <p>{t("app.test")}</p>
+    <div class={styles.features}>
+      <h1 id="features">{lang === "en" ? en.features : es.features}</h1>
     </div>
   );
 });
