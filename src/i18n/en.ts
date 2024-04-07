@@ -24,4 +24,19 @@ export const en = {
   question7: "7. Can I export my expense and income data?",
   answer7:
     "This functionality is currently under development. Soon the app will allow you to export your expense and income data in CSV format.",
+
+
+
+  feature1Title: "Financial Summary",
+  feature1Description: "The main screen of Smart Savings will provide you with an instant and comprehensive overview of your financial health. This screen will allow you to record income and expenses. You will get the current situation that will allow you to make the best decisions about your money.",
+  
+  feature2Title: "Transaction Details",
+  feature2Description: "The detail screen displays a breakdown of expenses or income by categories. By clicking on them, you can see the transactions corresponding to the category, being able to see the amount, date, and comment. This will help you identify areas of high spending and saving opportunities.",
+  
+  feature3Title: "Compound Interest Calculator",
+  feature3Description: "Smart Savings provides you with an intuitive tool that will allow you to understand the growth potential of your investments over time, applying the principle of compound interest.",
+  
+  feature4Title: "Educational Financial Articles",
+  feature4Description: "To expand your financial knowledge and use it correctly, Smart Savings offers you a series of articles designed by qualified professionals in the sector.",
+  
 };

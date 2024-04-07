@@ -24,4 +24,17 @@ export const es = {
   question7: "7. ¿Puedo exportar mis datos de gastos e ingresos?",
   answer7:
     "Actualmente esta funcionalidad está en desarrollo. Próximamente la aplicación te permitirá exportar tus datos de gastos e ingresos en formato CSV.",
+  
+  
+  feature1Title: "Resumen Financiero",
+  feature1Description: "La pantalla principal de Smart Savings te proporcionará una visión instantánea y muy completa de tu salud financiera. Esta pantalla te permitirá registrar ingresos y gastos. Obtendrás la situación actual que te permitirá tomar las mejores decisiones sobre tu dinero.",
+
+  feature2Title: "Detalle de las Transacciones",
+  feature2Description: "En la pantalla de detalle se muestra un desglose de los gastos o ingresos por categorías. Haciendo click en ellas, podrás ver las transacciones correspondientes a la categoría, pudiendo ver la cantidad, la fecha y el comentario. Esto te ayudará a identificar áreas de alto gasto y oportunidades de ahorro.",
+
+  feature3Title: "Calculadora de Interés Compuesto",
+  feature3Description: "Smart Savings te proporciona una herramienta intuitiva que te permitirá entender el potencial de crecimiento de tus inversiones a lo largo del tiempo, aplicando el principio de interés compuesto.",
+
+  feature4Title: "Artículos Financieros Educativos",
+  feature4Description: "Para que amplíes tus conocimientos financieros y los puedas utilizar de la forma correcta, Smart Savings te ofrece una serie de artículos diseñados por profesionales cualificados en el sector.",
 };
