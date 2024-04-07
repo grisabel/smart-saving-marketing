@@ -1,0 +1,19 @@
+.feature {
+    width: 100%;
+    display: flex;
+    gap:32px;
+    flex-wrap: wrap;
+
+    .featureData {
+        max-width: 69%;
+        .title {
+          
+        }
+        .description {
+
+        }
+    }
+    .img {
+        border-radius: 8px;
+    }
+}
