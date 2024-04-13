@@ -7,6 +7,7 @@ import styles from "./InputTextArea.module.scss";
 const InputTextArea = component$(
   ({
     id,
+    name,
     label,
     placeholder,
     icon,
@@ -27,6 +28,7 @@ const InputTextArea = component$(
         <div class={`${styles.inputContainer}`}>
           <textarea
             id={id}
+            name={name}
             class={`${styles.input} `}
             placeholder={placeholder}
             value={defaultValue ?? undefined}

@@ -4,6 +4,7 @@ export interface InputBaseProps {
   className?: string;
 
   id?: string;
+  name?: string;
   label?: string;
   placeholder?: string;
   type: "email" | "password" | "text" | "number";
