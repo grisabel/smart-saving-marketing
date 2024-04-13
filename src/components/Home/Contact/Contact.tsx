@@ -4,9 +4,12 @@ import InputText from "../../stories/atoms/Inputs/InputText";
 import InputTextEmail from "../../stories/atoms/Inputs/InputTextEmail";
 import Button from "~/components/stories/atoms/Buttons/Button";
 import InputTextArea from "~/components/stories/atoms/Inputs/InputTextArea";
+import i18n from "~/i18n";
+
+import styles from "./Contact.module.scss";
+
 
 export const Contact = component$(() => {
-  // useStyle$(stlyles) //como un decorador de angular
 
   // const menu = useSignal<{label: string, route: string}[]>([])
 
@@ -20,14 +23,31 @@ export const Contact = component$(() => {
   //     ]
   // })
 
+  const { t } = i18n;
+
   return (
-    <div>
+    <>
       <h1 id="contact">Contact</h1>
-      <InputBase type="text" label="label" placeholder="placeholder" />
-      <InputText label="label" placeholder="placeholder" />
-      <InputTextEmail label="label" placeholder="placeholder" />
-      <Button label="hola"/>
-      <InputTextArea label="label" placeholder="placeholder"/>
-    </div>
+      <form class={styles.formLayout}>
+        <InputBase
+          type="text"
+          label={t("contactForm.inputName.label")}
+          placeholder={t("contactForm.inputName.placeholder")}
+        />
+        <InputText
+          label={t("contactForm.inputEmail.label")}
+          placeholder={t("contactForm.inputEmail.placeholder")}
+        />
+        <InputTextEmail
+          label={t("contactForm.inputSubject.label")}
+          placeholder={t("contactForm.inputSubject.placeholder")}
+        />
+        <InputTextArea
+          label={t("contactForm.inputDescription.label")}
+          placeholder={t("contactForm.inputDescription.placeholder")}
+        />
+        <Button label={t("contactForm.btnSend")} type="submit"/>
+      </form>
+    </>
   );
 });
