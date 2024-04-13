@@ -37,4 +37,11 @@ export const es = {
 
   feature4Title: "Artículos Financieros Educativos",
   feature4Description: "Para que amplíes tus conocimientos financieros y los puedas utilizar de la forma correcta, Smart Savings te ofrece una serie de artículos diseñados por profesionales cualificados en el sector.",
+
+  dropdownLabelLanguage: "Idioma",
+    dropdownPlaceholderLanguage: "Selecciona un idioma...",
+    options: [
+      { value: "en", label: "Inglés" },
+      { value: "es", label: "Español" }
+    ]
 };

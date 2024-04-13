@@ -39,4 +39,11 @@ export const en = {
   feature4Title: "Educational Financial Articles",
   feature4Description: "To expand your financial knowledge and use it correctly, Smart Savings offers you a series of articles designed by qualified professionals in the sector.",
   
+
+  dropdownLabelLanguage: "Language",
+  dropdownPlaceholderLanguage: "Select a language...",
+  options: [
+    { value: "en", label: "English" },
+    { value: "es", label: "Español" }
+  ]
 };
