@@ -32,8 +32,6 @@ export const useContactForm = routeAction$(async (data: JSONObject) => {
 });
 
 export default component$(() => {
-  const contactFormAction = useContactForm();
-
   return (
     <>
       <Layout>

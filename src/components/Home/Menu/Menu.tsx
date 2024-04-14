@@ -3,9 +3,15 @@ import styles from "./Menu.module.scss";
 import Logo from "./components/Logo";
 import { inlineTranslate } from "qwik-speak";
 import Button from "~/components/stories/atoms/Buttons/Button";
+import { useLocation } from "@builder.io/qwik-city";
 
 export const Menu = component$(() => {
+  const location = useLocation();
   const t = inlineTranslate();
+
+  const currentLang = location.params.lang || "es";
+  const getUrl = (path: any) =>
+    currentLang === "es" ? `/${path}` : `/${currentLang}/${path}`;
 
   return (
     <div class={styles.header}>
@@ -13,13 +19,13 @@ export const Menu = component$(() => {
       <div class={styles.itemsMenu}>
         <ul class={styles.menuWp}>
           <li class={styles.menuItem}>
-            <a href="/features">{t("features")}</a>
+            <a href={getUrl("features")}>{t("features")}</a>
           </li>
           <li class={styles.menuItem}>
-            <a href="/qas">{t("qas")}</a>
+            <a href={getUrl("qas")}>{t("qas")}</a>
           </li>
           <li class={styles.menuItem}>
-            <a href="/contact">{t("contact")}</a>
+            <a href={getUrl("contact")}>{t("contact")}</a>
           </li>
         </ul>
         <div class={styles.buttons}>
