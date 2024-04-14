@@ -10,27 +10,20 @@ import { ActionStore, Form } from "@builder.io/qwik-city";
 
 import styles from "./Contact.module.scss";
 
+interface ContactProps {
+  contactFormAction: ActionStore<any, any>
+}
 
-export const Contact = component$(() => {
 
-  // const menu = useSignal<{label: string, route: string}[]>([])
-
-  // const handlerAddItem = $(() => {
-  //     menu.value = [
-  //     ...menu.value,
-  //     {
-  //         label: Exanple ,
-  //         route: /example'
-  //     }
-  //     ]
-  // })
+export const Contact = component$((props: ContactProps) => {
 
   const { t } = i18n;
+  const {contactFormAction} = props;
 
   return (
     <>
-      <h1 id="contact">Contact</h1>
-      <Form class={styles.formLayout}>
+      <h1 id="contact">{t("contactForm.title")}</h1>
+      <Form class={styles.formLayout} action={contactFormAction}>
         <InputBase
           id="name"
           name="name"
@@ -38,13 +31,13 @@ export const Contact = component$(() => {
           label={t("contactForm.inputName.label")}
           placeholder={t("contactForm.inputName.placeholder")}
         />
-        <InputText
+        <InputTextEmail
           id="email"
           name="email"
           label={t("contactForm.inputEmail.label")}
           placeholder={t("contactForm.inputEmail.placeholder")}
         />
-        <InputTextEmail
+        <InputText
           id="subject"
           name="subject"
           label={t("contactForm.inputSubject.label")}

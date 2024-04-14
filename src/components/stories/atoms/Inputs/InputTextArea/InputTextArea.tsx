@@ -34,6 +34,7 @@ const InputTextArea = component$(
             value={defaultValue ?? undefined}
             onInput$={handleChange}
             autocomplete="off"
+            required
           />
           {icon && icon}
         </div>

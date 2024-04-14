@@ -43,6 +43,7 @@ const i18n = {
     feature4Description:
       "Para que amplíes tus conocimientos financieros y los puedas utilizar de la forma correcta, Smart Savings te ofrece una serie de artículos diseñados por profesionales cualificados en el sector.",
     contactForm: {
+      title: "Contacto",
       inputName: {
         label: "Nombre",
         placeholder: "¿Cómo te llamas?",
@@ -106,6 +107,7 @@ const i18n = {
       "To expand your financial knowledge and use it correctly, Smart Savings offers you a series of articles designed by qualified professionals in the sector.",
 
     contactForm: {
+      title: "Contact",
       inputName: {
         label: "Name",
         placeholder: "What's your name?",

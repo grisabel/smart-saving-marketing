@@ -36,6 +36,7 @@ const InputBase = component$(
             value={defaultValue}
             onInput$={handleChange}
             autoComplete="off"
+            required
           />
           {icon && icon}
         </div>

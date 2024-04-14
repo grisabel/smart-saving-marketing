@@ -7,14 +7,27 @@ import { Contact } from "~/components/Home/Contact/Contact";
 import { Menu } from "~/components/Home/Menu/Menu";
 import styles from "./index.module.scss";
 
+import {JSONObject, RequestEventAction, routeAction$ } from "@builder.io/qwik-city";
+
+
+export const useContactForm = routeAction$( async (data: JSONObject, request:RequestEventAction) => {
+	return {
+		sucess: true
+	}
+})
+
+
 export default component$(() => {
+
+  const contactFormAction = useContactForm();
+
   return (
     <>
       <Menu />
       <div class={styles.contentWp}>
         <Features />
         <QAs />
-        <Contact />
+        <Contact contactFormAction={contactFormAction}/>
       </div>
     </>
   );
