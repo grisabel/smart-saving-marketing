@@ -12,7 +12,7 @@ export default defineConfig((): UserConfig => {
       qwikCity(), 
       qwikVite(),  
       qwikSpeakInline({
-        supportedLangs: ['en-US', 'es-ES'],
+        supportedLangs: ['en', 'es-ES'],
         defaultLang: 'es-ES',
         assetsPath: 'i18n'
       }), 
