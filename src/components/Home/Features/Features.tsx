@@ -4,13 +4,12 @@ import styles from "./Features.module.scss";
 import { FeatureImgRight } from "./components/FeatureImgRight/FeatureImgRight";
 import ImgDetails from "/images/details.png";
 import ImgSummary from "/images/summary.png";
-import ImgContent from "/images/content.png";
 import ImgTools from "/images/tools.png";
 import { FeatureImgLeft } from "./components/FeatureImgLeft/FeatureImgLeft";
 import { inlineTranslate } from "qwik-speak";
 
 export const Features = component$(() => {
-   const t = inlineTranslate();;
+   const t = inlineTranslate();
   return (
     <div class={styles.features}>
       <h1 id="features">{t("features")}</h1>

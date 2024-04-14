@@ -17,6 +17,7 @@ export type HttpPutRequest = HttpRequest;
 export type HttpPatchRequest = HttpRequest;
 export type HttpDeleteRequest = Omit<HttpRequest, "body">;
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export type HttpResponse<T> = Response;
 
 export interface HttpInterfaceService {

@@ -20,8 +20,6 @@ export class HttpMockAdapter implements HttpInterfaceMockAdapter {
   private mockResponsesPatch = new Map<string, MockAdapterResponseFnc<any>>();
   private mockResponsesDelete = new Map<string, MockAdapterResponseFnc<any>>();
 
-  setAccessToken = (value: string | null) => {};
-
   private matchUrl(
     endpoint: string,
     urlsPattern: string[]

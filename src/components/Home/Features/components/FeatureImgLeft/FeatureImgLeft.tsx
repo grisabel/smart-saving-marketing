@@ -1,4 +1,4 @@
-import { component$, PropFunction  } from "@builder.io/qwik";
+import { component$  } from "@builder.io/qwik";
 
 import styles from "./FeatureImgLeft.module.scss";
 

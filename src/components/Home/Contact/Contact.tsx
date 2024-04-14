@@ -16,7 +16,7 @@ interface ContactProps {
 }
 
 export const Contact = component$((props: ContactProps) => {
-   const t = inlineTranslate();;
+   const t = inlineTranslate();
   const { contactFormAction } = props;
 
   const open = useSignal<boolean>(true);

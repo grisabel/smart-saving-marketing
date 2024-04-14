@@ -7,7 +7,7 @@ import { config } from "../speak-config";
  * because it is invoked on every request to the server.
  * Avoid redirecting or throwing errors here, and prefer layouts or pages
  */
-export const onRequest: RequestHandler = ({ error, params, locale }) => {
+export const onRequest: RequestHandler = ({ params, locale }) => {
   let lang: string | undefined = undefined;
 
   if (params.lang && validateLocale(params.lang)) {

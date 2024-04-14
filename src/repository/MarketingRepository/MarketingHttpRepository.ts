@@ -10,6 +10,12 @@ export class MarkingHttpRepository implements MarketingInterfaceRepository {
       return this.http
         .post({
           endpoint: import.meta.env.PUBLIC_BASE_URL + "/marketing/contact-form",
+          body: {
+            name: requestModel.name,
+            email: requestModel.email,
+            subject: requestModel.subject,
+            description: requestModel.description
+          }
         })
         .then((response) => {
           try {

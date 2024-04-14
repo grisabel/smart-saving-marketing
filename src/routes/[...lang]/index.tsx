@@ -7,12 +7,12 @@ import { Contact } from "~/components/Home/Contact/Contact";
 import { Menu } from "~/components/Home/Menu/Menu";
 import styles from "./index.module.scss";
 
-import {JSONObject, RequestEventAction, routeAction$ } from "@builder.io/qwik-city";
+import {JSONObject, routeAction$ } from "@builder.io/qwik-city";
 import { MarketingFactoryRepository } from "~/repository/MarketingRepository/MarketingFactoryRepository";
 
 const marketingRepository = MarketingFactoryRepository.getInstance();
 
-export const useContactForm = routeAction$( async (data: JSONObject, request:RequestEventAction) => {
+export const useContactForm = routeAction$( async (data: JSONObject) => {
 
  try {
   await marketingRepository.sendContactForm({
