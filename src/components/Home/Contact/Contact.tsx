@@ -16,7 +16,7 @@ interface ContactProps {
 }
 
 export const Contact = component$((props: ContactProps) => {
-   const t = inlineTranslate();
+  const t = inlineTranslate();
   const { contactFormAction } = props;
 
   const open = useSignal<boolean>(true);
@@ -24,7 +24,7 @@ export const Contact = component$((props: ContactProps) => {
   const setOpen$ = $((value: boolean) => (open.value = value));
 
   return (
-    <>
+    <div class={styles.contact}>
       <h1 id="contact">{t("contactForm.title")}</h1>
       {contactFormAction.value?.sucess && (
         <Alert
@@ -63,6 +63,6 @@ export const Contact = component$((props: ContactProps) => {
         />
         <Button label={t("contactForm.btnSend")} type="submit" />
       </Form>
-    </>
+    </div>
   );
 });

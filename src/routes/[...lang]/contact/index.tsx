@@ -1,15 +1,8 @@
 import { component$ } from "@builder.io/qwik";
-import type {
-  DocumentHead,
-  StaticGenerateHandler,
-} from "@builder.io/qwik-city";
-
-import { Features } from "~/components/Home/Features/Features";
-
 import { JSONObject, routeAction$ } from "@builder.io/qwik-city";
-import { MarketingFactoryRepository } from "~/repository/MarketingRepository/MarketingFactoryRepository";
-import { config } from "~/speak-config";
+import { Contact } from "~/components/Home/Contact/Contact";
 import { Layout } from "~/components/Layout";
+import { MarketingFactoryRepository } from "~/repository/MarketingRepository/MarketingFactoryRepository";
 
 const marketingRepository = MarketingFactoryRepository.getInstance();
 
@@ -30,35 +23,11 @@ export const useContactForm = routeAction$(async (data: JSONObject) => {
     };
   }
 });
-
 export default component$(() => {
   const contactFormAction = useContactForm();
-
   return (
-    <>
-      <Layout>
-        <Features />
-      </Layout>
-    </>
+    <Layout>
+      <Contact contactFormAction={contactFormAction} />
+    </Layout>
   );
 });
-
-export const head: DocumentHead = {
-  title: "Smart Savings",
-  meta: [
-    {
-      name: "description",
-      content: "Qwik site description",
-    },
-  ],
-};
-
-export const onStaticGenerate: StaticGenerateHandler = async () => {
-  return {
-    params: config.supportedLocales.map((lng) => {
-      return {
-        lang: lng.lang,
-      };
-    }),
-  };
-};
