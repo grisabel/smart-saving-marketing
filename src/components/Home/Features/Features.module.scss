@@ -8,7 +8,6 @@
   position: relative;
   margin: auto;
   margin-top: 16px;
-  padding-bottom: 16px;
   max-width: 900px;
 
   display: flex;
@@ -30,4 +29,6 @@
   @media (max-width: 390px) {
     top: 330px;
   }
+
+  padding-bottom: 68px !important;
 }
