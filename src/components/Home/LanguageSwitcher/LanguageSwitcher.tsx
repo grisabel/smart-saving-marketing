@@ -9,7 +9,17 @@ export const LanguageSwitcher = component$(() => {
   const currentLang = location.params.lang || "es";
 
   const toggleLanguage = $(() => {
-    currentLang === "en" ? "en" : "es";
+    if (currentLang === "en") {
+      const newPath = location.prevUrl
+        ? location.prevUrl.href.replace("/en/", "/")
+        : "/";
+      console.log(newPath);
+      window.location.href = newPath;
+    } else {
+      const newPath = "/en" + location?.prevUrl?.pathname;
+      window.location.href =
+        location?.prevUrl?.origin + newPath + location?.prevUrl?.search;
+    }
   });
 
   return (
