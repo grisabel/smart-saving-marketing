@@ -10,7 +10,7 @@ import { FeatureImgLeft } from "./components/FeatureImgLeft/FeatureImgLeft";
 import { inlineTranslate } from "qwik-speak";
 
 export const Features = component$(() => {
-   const t = inlineTranslate();
+  const t = inlineTranslate();
   return (
     <div class={styles.features}>
       <h1 id="features">{t("features")}</h1>
