@@ -8,7 +8,7 @@ export interface LanguageStore {
   lang: string;
 }
 export const QAs = component$(() => {
-   const t = inlineTranslate();
+  const t = inlineTranslate();
 
   return (
     <div class={styles.qas}>

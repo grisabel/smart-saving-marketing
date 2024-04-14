@@ -1,5 +1,6 @@
 @import "@styles/variables/fonts.scss";
 @import "@styles/variables/breakpoints.scss";
+
 .qas {
   position: relative;
   margin: auto;
@@ -25,6 +26,8 @@
   @media (max-width: 390px) {
     top: 330px;
   }
+
+  padding-bottom: 68px !important;
   .faqContainer {
     margin-top: 24px;
     display: flex;
