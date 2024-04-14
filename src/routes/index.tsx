@@ -15,18 +15,21 @@ const marketingRepository = MarketingFactoryRepository.getInstance();
 export const useContactForm = routeAction$( async (data: JSONObject, request:RequestEventAction) => {
 
  try {
+  console.log({data})
   await marketingRepository.sendContactForm({
     name: data.name as string,
     email: data.email as string,
     description: data.description as string,
     subject: data.subject as string
   })
-
 	return {
 		sucess: true
 	}
  } catch (error) {
-  return error
+
+  return {
+		sucess: false
+	}
  }
 })
 

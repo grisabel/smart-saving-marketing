@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal, $ } from "@builder.io/qwik";
 import InputBase from "../../stories/atoms/Inputs/InputBase";
 import InputText from "../../stories/atoms/Inputs/InputText";
 import InputTextEmail from "../../stories/atoms/Inputs/InputTextEmail";
@@ -9,20 +9,32 @@ import i18n from "~/i18n";
 import { ActionStore, Form } from "@builder.io/qwik-city";
 
 import styles from "./Contact.module.scss";
+import Alert from "~/components/stories/atoms/Alert";
 
 interface ContactProps {
-  contactFormAction: ActionStore<any, any>
+  contactFormAction: ActionStore<any, any>;
 }
 
-
 export const Contact = component$((props: ContactProps) => {
-
   const { t } = i18n;
-  const {contactFormAction} = props;
+  const { contactFormAction } = props;
+
+  const open = useSignal<boolean>(true);
+
+  const setOpen$ = $((value: boolean) => (open.value = value));
 
   return (
     <>
       <h1 id="contact">{t("contactForm.title")}</h1>
+      {contactFormAction.value?.sucess || true && (
+        <Alert
+          open={open.value}
+          title="title"
+          description="description"
+          type="success"
+          setOpen={setOpen$}
+        />
+      )}
       <Form class={styles.formLayout} action={contactFormAction}>
         <InputBase
           id="name"
@@ -49,7 +61,7 @@ export const Contact = component$((props: ContactProps) => {
           label={t("contactForm.inputDescription.label")}
           placeholder={t("contactForm.inputDescription.placeholder")}
         />
-        <Button label={t("contactForm.btnSend")} type="submit"/>
+        <Button label={t("contactForm.btnSend")} type="submit" />
       </Form>
     </>
   );
