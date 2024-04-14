@@ -13,13 +13,13 @@ export const Menu = component$(() => {
       <div class={styles.itemsMenu}>
         <ul class={styles.menuWp}>
           <li class={styles.menuItem}>
-            <a href="#features">{t("features")}</a>
+            <a href="/features">{t("features")}</a>
           </li>
           <li class={styles.menuItem}>
-            <a href="#qas">{t("qas")}</a>
+            <a href="/qas">{t("qas")}</a>
           </li>
           <li class={styles.menuItem}>
-            <a href="#contact">{t("contact")}</a>
+            <a href="/contact">{t("contact")}</a>
           </li>
         </ul>
         <div class={styles.buttons}>
