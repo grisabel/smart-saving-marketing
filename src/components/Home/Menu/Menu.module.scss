@@ -4,8 +4,8 @@
 .header {
   display: flex;
   align-items: center;
-
   position: static;
+  column-gap: 40px;
 
   flex-wrap: wrap;
   position: fixed;
@@ -14,38 +14,108 @@
   background-color: white;
   width: 100%;
   border-bottom: 1px solid #ccc;
-  height: 120px;
+  height: 140px;
   z-index: 1;
+  padding-left: 16px;
 
-  @media (min-width: 601px) {
-    height: 85px;
+  @media (min-width: 1024px) {
+    height: 110px;
     align-items: flex-end;
-    column-gap: 70px;
+    column-gap: 40px;
   }
-  .menuWp {
+  @media (max-width: 767px) {
+    height: 200px;
+  }
+  @media (max-width: 390px) {
+    height: 310px;
+    padding-right: 16px;
+  }
+  .itemsMenu {
     display: flex;
-    gap: 32px;
-    min-width: 320px;
-    justify-content: center;
-    width: 100%;
-    @media (min-width: 601px) {
-      min-width: 0;
-      justify-content: left;
-      width: auto;
-      padding-bottom: 9px;
-    }
-    @include f--b1-regular;
-    color: var(--grey-main);
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-between;
+    padding-bottom: 9px;
+    column-gap: 16px;
 
-    .menuItem {
-      list-style: none;
-      a {
-        text-decoration: none;
-        color: inherit;
+    @media (max-width: 767px) {
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+    }
+    @media (min-width: 1024px) {
+      align-items: flex-end;
+    }
+
+    .menuWp {
+      display: flex;
+      gap: 32px;
+      min-width: 320px;
+      justify-content: center;
+      width: 100%;
+
+      @media (min-width: 1024px) {
+        justify-content: left;
+      }
+      @include f--b1-regular;
+      color: var(--grey-main);
+
+      @media (max-width: 390px) {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .menuItem {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        @media (max-width: 835px) {
+          width: min-content;
+        }
+
+        @media (max-width: 767px) {
+          text-wrap: nowrap;
+        }
+
+        @media (max-width: 500px) {
+          text-wrap: wrap;
+        }
+
+        @media (max-width: 390px) {
+          text-wrap: nowrap;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+
+          @media (min-width: 1024px) {
+            text-wrap: nowrap;
+          }
+        }
+      }
+      .menuItem:hover {
+        transform: scale(1.1);
       }
     }
-    .menuItem:hover {
-      transform: scale(1.1);
+
+    .buttons {
+      display: flex;
+      column-gap: 16px;
+      margin-right: 16px;
+
+      @media (max-width: 1023px) and (min-width: 391px) {
+        min-width: 350px;
+      }
+
+      @media (max-width: 390px) {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+        margin: 0;
+      }
+      button {
+        text-wrap: nowrap;
+      }
     }
   }
 }

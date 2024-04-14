@@ -1,35 +1,32 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./Menu.module.scss";
 import Logo from "./components/Logo";
-import { InputDropDown } from "~/components/stories/atoms/Inputs/InputDropDown/InputDropDown";
 import { inlineTranslate } from "qwik-speak";
+import Button from "~/components/stories/atoms/Buttons/Button";
 
 export const Menu = component$(() => {
-   const t = inlineTranslate();;
+  const t = inlineTranslate();
 
   return (
     <div class={styles.header}>
       <Logo />
-      <ul class={styles.menuWp}>
-        <li class={styles.menuItem}>
-          <a href="#features">{t("features")}</a>
-        </li>
-        <li class={styles.menuItem}>
-          <a href="#qas">{t("qas")}</a>
-        </li>
-        <li class={styles.menuItem}>
-          <a href="#contact">{t("contact")}</a>
-        </li>
-      </ul>
-      {/* 
-      <div>
-        <InputDropDown
-          id="language-selector"
-          options={i18n.options}
-          value={state.currentLanguage}
-          onChange={handleChangeLanguage}
-        />
-      </div> */}
+      <div class={styles.itemsMenu}>
+        <ul class={styles.menuWp}>
+          <li class={styles.menuItem}>
+            <a href="#features">{t("features")}</a>
+          </li>
+          <li class={styles.menuItem}>
+            <a href="#qas">{t("qas")}</a>
+          </li>
+          <li class={styles.menuItem}>
+            <a href="#contact">{t("contact")}</a>
+          </li>
+        </ul>
+        <div class={styles.buttons}>
+          <Button label={t("feBtn")} type="button" color="secondary" />
+          <Button label={t("loginBtn")} type="button" />
+        </div>
+      </div>
     </div>
   );
 });

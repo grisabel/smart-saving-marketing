@@ -1,7 +1,10 @@
 {
   "features": "Features",
-  "qas": "Frequently Asked Questions",
+  "qas": "Frequently Questions",
   "contact": "Contact",
+
+  "feBtn": "Financial Education",
+  "loginBtn": "Log In",
 
   "question1": "1. How can I register in the Smart Savings app?",
   "answer1": "To register, simply click on the 'I want to sign up!' button on the main screen, fill out the form with your email address and a secure password among other data, and you can immediately enjoy Smart Savings.",

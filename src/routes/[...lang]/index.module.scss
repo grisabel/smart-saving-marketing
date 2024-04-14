@@ -3,7 +3,6 @@
 
 .contentWp {
   position: relative;
-  top: 120px;
   margin: auto;
   margin-top: 16px;
   padding-bottom: 16px;
@@ -13,18 +12,19 @@
   flex-direction: column;
   gap: 32px;
 
-  @include f--b2-regular;
+  @include f--b1-regular;
 
-  @media (min-width: 601px) {
-    $size: 1rem;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-size: $size;
-    line-height: $size * 1.5;
-    font-weight: normal;
-
-    top: 85px;
-    margin-top: 32px;
-    padding-bottom: 32px;
+  @media (min-width: 1024px) {
+    top: 110px;
+  }
+  @media (max-width: 1023px) {
+    top: 140px;
+    padding: 0 16px;
+  }
+  @media (max-width: 767px) {
+    top: 200px;
+  }
+  @media (max-width: 390px) {
+    top: 310px;
   }
 }
