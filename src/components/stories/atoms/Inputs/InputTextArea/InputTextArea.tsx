@@ -12,13 +12,13 @@ const InputTextArea = component$(
     placeholder,
     icon,
     value: defaultValue,
-    onChange,
+    onChange$,
     className,
   }: InputBaseProps) => {
 
     const handleChange = $((event: InputEvent) => {
-      if (typeof onChange === "function") {
-        onChange(event);
+      if (typeof onChange$ === "function") {
+        onChange$(event);
       }
     });
 

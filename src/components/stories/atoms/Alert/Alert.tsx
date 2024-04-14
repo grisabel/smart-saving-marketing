@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { QRL, component$ } from "@builder.io/qwik";
 import styles from "./Alert.module.scss";
 import crossBigIcon from "@/styles/assets/svg/cross-big.svg";
 import successIcon from "@/styles/assets/svg/success.svg";
@@ -8,11 +8,11 @@ export interface AlertProps {
   description: string;
   type: "warning" | "danger" | "success";
   open: boolean;
-  setOpen: (value: boolean) => void;
+  setOpen$?: QRL<(value: boolean) => void>;
 }
 
 const Alert = component$(
-  ({ title, description, type, open, setOpen }: AlertProps) => {
+  ({ title, description, type, open, setOpen$ }: AlertProps) => {
     let name: "danger" | "info-circle" | "success";
 
     switch (type) {
@@ -49,7 +49,7 @@ const Alert = component$(
           <div
             class={styles.close}
             onClick$={() => {
-              setOpen(false);
+              setOpen$?.(false);
             }}
           >
             <img src={crossBigIcon} alt="cross-big" width={16} height={16} />

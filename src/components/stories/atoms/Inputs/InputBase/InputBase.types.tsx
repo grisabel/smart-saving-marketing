@@ -1,3 +1,4 @@
+import { QRL } from "@builder.io/qwik";
 import { JSX } from "@builder.io/qwik/jsx-runtime";
 
 export interface InputBaseProps {
@@ -11,5 +12,5 @@ export interface InputBaseProps {
   icon?: JSX.Element;
 
   value?: string | null;
-  onChange?: (value: InputEvent) => void;
+  onChange$?: QRL<(value: InputEvent) => void>;
 }

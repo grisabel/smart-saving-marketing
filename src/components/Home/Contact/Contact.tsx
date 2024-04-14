@@ -32,7 +32,7 @@ export const Contact = component$((props: ContactProps) => {
           title={t("contactForm.success.title")}
           description={t("contactForm.success.subtitle")}
           type="success"
-          setOpen={setOpen$}
+          setOpen$={setOpen$}
         />
       )}
       <Form class={styles.formLayout} action={contactFormAction}>

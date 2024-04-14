@@ -1,11 +1,11 @@
-import { component$, $ } from "@builder.io/qwik";
+import { component$, $, QRL } from "@builder.io/qwik";
 import styles from "./Button.module.scss";
 
 export interface ButtonProps {
   label: string;
   color?: "primary" | "secondary";
   type?: "button" | "submit";
-  onClick?: () => void;
+  onClick$?: QRL<() => void>;
   disabled?: boolean;
   className?: string;
 }
@@ -13,14 +13,14 @@ export interface ButtonProps {
 const Button = component$(
   ({
     label,
-    onClick = () => null,
+    onClick$,
     color = "primary",
     type = "button",
     disabled,
     className,
   }: ButtonProps) => {
     const handleClick = $(() => {
-      onClick();
+      onClick$?.();
     });
     return (
       <button
