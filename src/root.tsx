@@ -8,7 +8,13 @@ import { RouterHead } from "./components/router-head/router-head";
 
 import "./styles/global.scss";
 
+import { useQwikSpeak } from "qwik-speak";
+import { config } from "./speak-config";
+import { translationFn } from "./speak-functions";
+
 export default component$(() => {
+  useQwikSpeak({ config, translationFn });
+
   /**
    * The root of a QwikCity site always start with the <QwikCityProvider> component,
    * immediately followed by the document's <head> and <body>.

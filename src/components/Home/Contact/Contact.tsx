@@ -4,19 +4,19 @@ import InputText from "../../stories/atoms/Inputs/InputText";
 import InputTextEmail from "../../stories/atoms/Inputs/InputTextEmail";
 import Button from "~/components/stories/atoms/Buttons/Button";
 import InputTextArea from "~/components/stories/atoms/Inputs/InputTextArea";
-import i18n from "~/i18n";
 
 import { ActionStore, Form } from "@builder.io/qwik-city";
 
 import styles from "./Contact.module.scss";
 import Alert from "~/components/stories/atoms/Alert";
+import { inlineTranslate } from "qwik-speak";
 
 interface ContactProps {
   contactFormAction: ActionStore<any, any>;
 }
 
 export const Contact = component$((props: ContactProps) => {
-  const { t } = i18n;
+   const t = inlineTranslate();;
   const { contactFormAction } = props;
 
   const open = useSignal<boolean>(true);
