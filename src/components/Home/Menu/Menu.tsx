@@ -1,4 +1,4 @@
-import { component$ } from "@builder.io/qwik";
+import { $, component$ } from "@builder.io/qwik";
 import styles from "./Menu.module.scss";
 import Logo from "./components/Logo";
 import { inlineTranslate } from "qwik-speak";
@@ -12,6 +12,14 @@ export const Menu = component$(() => {
   const currentLang = location.params.lang || "es";
   const getUrl = (path: any) =>
     currentLang === "es" ? `/${path}` : `/${currentLang}/${path}`;
+
+  const redirectContent = $(() => {
+    window.location.href = import.meta.env.PUBLIC_RESOURCE_URL;
+  });
+
+  const redirectLogin = $(() => {
+    window.location.href = import.meta.env.PUBLIC_LOGIN_URL;
+  });
 
   return (
     <div class={styles.header}>
@@ -29,8 +37,17 @@ export const Menu = component$(() => {
           </li>
         </ul>
         <div class={styles.buttons}>
-          <Button label={t("feBtn")} type="button" color="secondary" />
-          <Button label={t("loginBtn")} type="button" />
+          <Button
+            label={t("feBtn")}
+            type="button"
+            color="secondary"
+            onClick$={redirectContent}
+          />
+          <Button
+            label={t("loginBtn")}
+            type="button"
+            onClick$={redirectLogin}
+          />
         </div>
       </div>
     </div>
