@@ -3,6 +3,9 @@
   "qas": "Frequently Asked Questions",
   "contact": "Contact",
 
+  "feBtn": "Educación Financiera",
+  "loginBtn": "Iniciar Sesión",
+
   "question1": "1. How can I register in the Smart Savings app?",
   "answer1": "To register, simply click on the 'I want to sign up!' button on the main screen, fill out the form with your email address and a secure password among other data, and you can immediately enjoy Smart Savings.",
   "question2": "2. Is it necessary to register to use the app?",

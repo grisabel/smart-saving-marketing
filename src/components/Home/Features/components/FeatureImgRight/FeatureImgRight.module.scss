@@ -1,15 +1,19 @@
 .feature {
-    width: 100%;
-    display: flex;
-    gap:32px;
-    justify-content: center;
-    flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
 
-    .featureData {
-        max-width: 69%;
+  .featureData {
+    max-width: 69%;
+
+    @media (max-width: 1023px) {
+      max-width: 100%;
     }
-    .img {
-        border-radius: 8px;
-        border: 1px solid var(--grey-main);
-    }
+  }
+  .img {
+    border-radius: 8px;
+    border: 1px solid var(--grey-main);
+  }
 }
