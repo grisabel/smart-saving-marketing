@@ -1,14 +1,14 @@
 import { component$ } from "@builder.io/qwik";
 
-import i18n from "~/i18n";
 import DropDown from "./components/drop-down";
 
 import styles from "./QAs.module.scss";
+import { inlineTranslate } from "qwik-speak";
 export interface LanguageStore {
   lang: string;
 }
 export const QAs = component$(() => {
-  const { t } = i18n;
+   const t = inlineTranslate();;
 
   return (
     <div class={styles.qas}>

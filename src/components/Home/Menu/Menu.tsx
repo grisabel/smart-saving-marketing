@@ -1,12 +1,11 @@
 import { component$ } from "@builder.io/qwik";
-import i18n from "~/i18n";
-
 import styles from "./Menu.module.scss";
 import Logo from "./components/Logo";
 import { InputDropDown } from "~/components/stories/atoms/Inputs/InputDropDown/InputDropDown";
+import { inlineTranslate } from "qwik-speak";
 
 export const Menu = component$(() => {
-  const { t } = i18n;
+   const t = inlineTranslate();;
 
   return (
     <div class={styles.header}>
