@@ -1,47 +1,26 @@
-import { component$, useStore, useVisibleTask$ } from "@builder.io/qwik";
+import { component$ } from "@builder.io/qwik";
+
+import i18n from "~/i18n";
 import DropDown from "./components/drop-down";
-import { en } from "~/i18n/en";
-import { es } from "~/i18n/es";
-import { useLanguage } from "~/hooks/useLanguage";
+
 import styles from "./QAs.module.scss";
 export interface LanguageStore {
   lang: string;
 }
 export const QAs = component$(() => {
-  const { lang } = useLanguage();
+  const { t } = i18n;
 
   return (
     <div class={styles.qas}>
-      <h1 id="qas">{lang === "en" ? en.qas : es.qas}</h1>
+      <h1 id="qas">{t("qas")}</h1>
       <div class={styles.faqContainer}>
-        <DropDown
-          question={lang === "en" ? en.question1 : es.question1}
-          answer={lang === "en" ? en.answer1 : es.answer1}
-        />
-        <DropDown
-          question={lang === "en" ? en.question2 : es.question2}
-          answer={lang === "en" ? en.answer2 : es.answer2}
-        />
-        <DropDown
-          question={lang === "en" ? en.question3 : es.question3}
-          answer={lang === "en" ? en.answer3 : es.answer3}
-        />
-        <DropDown
-          question={lang === "en" ? en.question4 : es.question4}
-          answer={lang === "en" ? en.answer4 : es.answer4}
-        />
-        <DropDown
-          question={lang === "en" ? en.question5 : es.question5}
-          answer={lang === "en" ? en.answer5 : es.answer5}
-        />
-        <DropDown
-          question={lang === "en" ? en.question6 : es.question6}
-          answer={lang === "en" ? en.answer6 : es.answer6}
-        />
-        <DropDown
-          question={lang === "en" ? en.question7 : es.question7}
-          answer={lang === "en" ? en.answer7 : es.answer7}
-        />
+        <DropDown question={t("question1")} answer={t("answer1")} />
+        <DropDown question={t("question2")} answer={t("answer2")} />
+        <DropDown question={t("question3")} answer={t("answer3")} />
+        <DropDown question={t("question4")} answer={t("answer4")} />
+        <DropDown question={t("question5")} answer={t("answer5")} />
+        <DropDown question={t("question6")} answer={t("answer6")} />
+        <DropDown question={t("question7")} answer={t("answer7")} />
       </div>
     </div>
   );

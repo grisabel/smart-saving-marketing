@@ -1,0 +1,15 @@
+.feature {
+    width: 100%;
+    display: flex;
+    gap:32px;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+
+    .featureData {
+        max-width: 69%;
+    }
+    .img {
+        border-radius: 8px;
+        border: 1px solid var(--grey-main);
+    }
+}
