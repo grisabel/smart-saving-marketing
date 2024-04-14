@@ -1,5 +1,5 @@
 import { component$ } from "@builder.io/qwik";
-import type { DocumentHead } from "@builder.io/qwik-city";
+import type { DocumentHead, StaticGenerateHandler } from "@builder.io/qwik-city";
 
 import { Features } from "~/components/Home/Features/Features";
 import { QAs } from "~/components/Home/QAs/QAs";
@@ -9,6 +9,7 @@ import styles from "./index.module.scss";
 
 import {JSONObject, routeAction$ } from "@builder.io/qwik-city";
 import { MarketingFactoryRepository } from "~/repository/MarketingRepository/MarketingFactoryRepository";
+import { config } from "~/speak-config";
 
 const marketingRepository = MarketingFactoryRepository.getInstance();
 
@@ -57,4 +58,15 @@ export const head: DocumentHead = {
       content: "Qwik site description",
     },
   ],
+};
+
+
+export const onStaticGenerate: StaticGenerateHandler = async () => {
+  return {
+    params: config.supportedLocales.map(lng => {
+      return {
+        lang : lng.lang
+      }
+    })
+  };
 };

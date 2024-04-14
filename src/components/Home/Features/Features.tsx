@@ -2,9 +2,10 @@ import { component$ } from "@builder.io/qwik";
 import styles from "./Features.module.scss";
 
 import { FeatureImgRight } from "./components/FeatureImgRight/FeatureImgRight";
-import ImgDetails from "/images/details.png";
-import ImgSummary from "/images/summary.png";
-import ImgTools from "/images/tools.png";
+import ImgDetails from "@/styles/assets/images/details.png";
+import ImgSummary from "@/styles/assets/images/summary.png";
+import ImgTools from "@/styles/assets/images/tools.png";
+
 import { FeatureImgLeft } from "./components/FeatureImgLeft/FeatureImgLeft";
 import { inlineTranslate } from "qwik-speak";
 

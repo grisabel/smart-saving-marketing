@@ -1,6 +1,6 @@
 import { component$ } from "@builder.io/qwik";
 import styles from "./Logo.module.scss";
-import ImgLogo from "/logo.ico";
+import ImgLogo from "@/styles/assets/logo/logo.ico";
 
 const Logo = component$(() => {
   return (
