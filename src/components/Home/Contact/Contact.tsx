@@ -26,11 +26,11 @@ export const Contact = component$((props: ContactProps) => {
   return (
     <>
       <h1 id="contact">{t("contactForm.title")}</h1>
-      {contactFormAction.value?.sucess || true && (
+      {contactFormAction.value?.sucess && (
         <Alert
           open={open.value}
-          title="title"
-          description="description"
+          title={t("contactForm.success.title")}
+          description={t("contactForm.success.subtitle")}
           type="success"
           setOpen={setOpen$}
         />

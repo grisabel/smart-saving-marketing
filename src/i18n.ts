@@ -44,6 +44,10 @@ const i18n = {
       "Para que amplíes tus conocimientos financieros y los puedas utilizar de la forma correcta, Smart Savings te ofrece una serie de artículos diseñados por profesionales cualificados en el sector.",
     contactForm: {
       title: "Contacto",
+      success:{
+        title: "Hemos Recibido tu Formulario",
+        subtitle: "Formulario recibido. Nos esforzaremos por responderte lo más pronto posible."
+      },
       inputName: {
         label: "Nombre",
         placeholder: "¿Cómo te llamas?",
@@ -107,6 +111,10 @@ const i18n = {
       "To expand your financial knowledge and use it correctly, Smart Savings offers you a series of articles designed by qualified professionals in the sector.",
 
     contactForm: {
+      success: {
+        title: "We Have Received Your Form",
+        subtitle: "Form received. We will strive to respond to you as soon as possible."
+      },
       title: "Contact",
       inputName: {
         label: "Name",
