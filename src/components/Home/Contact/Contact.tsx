@@ -1,33 +1,68 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useSignal, $ } from "@builder.io/qwik";
 import InputBase from "../../stories/atoms/Inputs/InputBase";
 import InputText from "../../stories/atoms/Inputs/InputText";
 import InputTextEmail from "../../stories/atoms/Inputs/InputTextEmail";
 import Button from "~/components/stories/atoms/Buttons/Button";
 import InputTextArea from "~/components/stories/atoms/Inputs/InputTextArea";
+import i18n from "~/i18n";
 
-export const Contact = component$(() => {
-  // useStyle$(stlyles) //como un decorador de angular
+import { ActionStore, Form } from "@builder.io/qwik-city";
 
-  // const menu = useSignal<{label: string, route: string}[]>([])
+import styles from "./Contact.module.scss";
+import Alert from "~/components/stories/atoms/Alert";
 
-  // const handlerAddItem = $(() => {
-  //     menu.value = [
-  //     ...menu.value,
-  //     {
-  //         label: Exanple ,
-  //         route: /example'
-  //     }
-  //     ]
-  // })
+interface ContactProps {
+  contactFormAction: ActionStore<any, any>;
+}
+
+export const Contact = component$((props: ContactProps) => {
+  const { t } = i18n;
+  const { contactFormAction } = props;
+
+  const open = useSignal<boolean>(true);
+
+  const setOpen$ = $((value: boolean) => (open.value = value));
 
   return (
-    <div>
-      <h1 id="contact">Contact</h1>
-      <InputBase type="text" label="label" placeholder="placeholder" />
-      <InputText label="label" placeholder="placeholder" />
-      <InputTextEmail label="label" placeholder="placeholder" />
-      <Button label="hola"/>
-      <InputTextArea label="label" placeholder="placeholder"/>
-    </div>
+    <>
+      <h1 id="contact">{t("contactForm.title")}</h1>
+      {contactFormAction.value?.sucess && (
+        <Alert
+          open={open.value}
+          title={t("contactForm.success.title")}
+          description={t("contactForm.success.subtitle")}
+          type="success"
+          setOpen={setOpen$}
+        />
+      )}
+      <Form class={styles.formLayout} action={contactFormAction}>
+        <InputBase
+          id="name"
+          name="name"
+          type="text"
+          label={t("contactForm.inputName.label")}
+          placeholder={t("contactForm.inputName.placeholder")}
+        />
+        <InputTextEmail
+          id="email"
+          name="email"
+          label={t("contactForm.inputEmail.label")}
+          placeholder={t("contactForm.inputEmail.placeholder")}
+        />
+        <InputText
+          id="subject"
+          name="subject"
+          label={t("contactForm.inputSubject.label")}
+          placeholder={t("contactForm.inputSubject.placeholder")}
+        />
+        <InputTextArea
+          id="description"
+          name="description"
+          label={t("contactForm.inputDescription.label")}
+          placeholder={t("contactForm.inputDescription.placeholder")}
+        />
+        <Button label={t("contactForm.btnSend")} type="submit" />
+      </Form>
+    </>
   );
 });

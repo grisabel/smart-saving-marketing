@@ -7,6 +7,7 @@ import styles from "./InputBase.module.scss";
 const InputBase = component$(
   ({
     id,
+    name,
     label,
     placeholder,
     type,
@@ -28,12 +29,14 @@ const InputBase = component$(
         <div class={`${styles.inputContainer}`}>
           <input
             id={id}
+            name={name}
             class={`${styles.input} `}
             placeholder={placeholder}
             type={type}
             value={defaultValue}
             onInput$={handleChange}
             autoComplete="off"
+            required
           />
           {icon && icon}
         </div>

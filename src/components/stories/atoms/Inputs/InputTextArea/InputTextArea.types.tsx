@@ -4,6 +4,7 @@ export interface InputBaseProps {
   className?: string;
 
   id?: string;
+  name?: string;
   label?: string;
   placeholder?: string;
   icon?: JSX.Element;

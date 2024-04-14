@@ -42,6 +42,30 @@ const i18n = {
     feature4Title: "Artículos Financieros Educativos",
     feature4Description:
       "Para que amplíes tus conocimientos financieros y los puedas utilizar de la forma correcta, Smart Savings te ofrece una serie de artículos diseñados por profesionales cualificados en el sector.",
+    contactForm: {
+      title: "Contacto",
+      success:{
+        title: "Hemos Recibido tu Formulario",
+        subtitle: "Formulario recibido. Nos esforzaremos por responderte lo más pronto posible."
+      },
+      inputName: {
+        label: "Nombre",
+        placeholder: "¿Cómo te llamas?",
+      },
+      inputEmail: {
+        label: "Email",
+        placeholder: "¿Dónde te enviamos la respuesta?",
+      },
+      inputSubject: {
+        label: "Asunto",
+        placeholder: "¿De qué vamos a hablar?",
+      },
+      inputDescription: {
+        label: "Mensaje",
+        placeholder: "Dinos qué necesitas, te leemos",
+      },
+      btnSend: "¡Adelante, pulsa aquí!",
+    },
   },
   en: {
     features: "Features",
@@ -85,12 +109,45 @@ const i18n = {
     feature4Title: "Educational Financial Articles",
     feature4Description:
       "To expand your financial knowledge and use it correctly, Smart Savings offers you a series of articles designed by qualified professionals in the sector.",
+
+    contactForm: {
+      success: {
+        title: "We Have Received Your Form",
+        subtitle: "Form received. We will strive to respond to you as soon as possible."
+      },
+      title: "Contact",
+      inputName: {
+        label: "Name",
+        placeholder: "What's your name?",
+      },
+      inputEmail: {
+        label: "Email",
+        placeholder: "Where should we send the reply?",
+      },
+      inputSubject: {
+        label: "Subject",
+        placeholder: "What are we going to talk about?",
+      },
+      inputDescription: {
+        label: "Message",
+        placeholder: "Tell us what you need, we're listening",
+      },
+      btnSend: "Go ahead, click here!",
+    },
   },
 };
 
 export default {
   t: (label: string): string => {
     //@ts-ignore
-    return i18n?.es?.[label] ?? label;
+    const path: string[] = label.split(".");
+    let result = i18n.es as any;
+    for (const p of path) {
+      result = result[p];
+      if (result === undefined) {
+        return label;
+      }
+    }
+    return result;
   },
 };
