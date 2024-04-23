@@ -18,7 +18,8 @@ export const Menu = component$(() => {
   });
 
   const redirectLogin = $(() => {
-    window.location.href = import.meta.env.PUBLIC_LOGIN_URL;
+    const url = import.meta.env.PUBLIC_LOGIN_URL + "/" + currentLang;
+    window.location.href = url;
   });
 
   return (
