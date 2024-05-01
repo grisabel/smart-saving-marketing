@@ -27,6 +27,7 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
+        <title>Smart Savings</title>
         <RouterHead />
       </head>
       <body lang="en">
