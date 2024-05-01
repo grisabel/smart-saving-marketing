@@ -20,12 +20,10 @@
     top: 160px;
     padding: 0 16px;
   }
-  @media (max-width: 767px) {
+  @media (max-width: 835px) {
     top: 220px;
   }
-  @media (max-width: 390px) {
-    top: 330px;
-  }
+
   .formLayout {
     display: flex;
     flex-direction: column;
