@@ -26,7 +26,7 @@ export const Contact = component$((props: ContactProps) => {
   return (
     <div class={styles.contact}>
       <h1 id="contact">{t("contactForm.title")}</h1>
-      {contactFormAction.value?.sucess && (
+      {contactFormAction.status === 200 && (
         <Alert
           open={open.value}
           title={t("contactForm.success.title")}
