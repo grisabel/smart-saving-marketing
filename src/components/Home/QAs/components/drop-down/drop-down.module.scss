@@ -1,0 +1,28 @@
+@import "@styles/variables/fonts.scss";
+.dropdown {
+  background-color: var(--blue-container);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+
+  @include f--b2-regular;
+
+  .question {
+    @include f--b1-regular;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.rotate {
+      @include f--b1-bold;
+    }
+
+    .icon {
+      transition: transform 0.3s ease;
+      &.rotate {
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

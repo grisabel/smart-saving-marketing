@@ -1,0 +1,36 @@
+@import "@styles/variables/fonts.scss";
+@import "@styles/variables/breakpoints.scss";
+.contact {
+  position: relative;
+  margin: auto;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @include f--b1-regular;
+
+  @media (min-width: 1024px) {
+    top: 130px;
+  }
+  @media (max-width: 1023px) {
+    top: 160px;
+    padding: 0 16px;
+  }
+  @media (max-width: 835px) {
+    top: 220px;
+  }
+
+  .formLayout {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin-bottom: 16px;
+  }
+
+  padding-bottom: 68px !important;
+}

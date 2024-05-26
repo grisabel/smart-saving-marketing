@@ -1,0 +1,34 @@
+@import "@styles/variables/fonts.scss";
+@import "@styles/variables/breakpoints.scss";
+
+.qas {
+  position: relative;
+  margin: auto;
+  margin-top: 16px;
+  padding-bottom: 16px;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+
+  @include f--b1-regular;
+
+  @media (min-width: 1024px) {
+    top: 130px;
+  }
+  @media (max-width: 1023px) {
+    top: 160px;
+    padding: 0 16px;
+  }
+  @media (max-width: 835px) {
+    top: 220px;
+  }
+
+  padding-bottom: 68px !important;
+  .faqContainer {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}

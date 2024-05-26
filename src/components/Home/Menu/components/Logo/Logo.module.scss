@@ -1,0 +1,31 @@
+.logo {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  transform: scale(0.7);
+
+  img {
+    min-width: 150px;
+    min-height: 80px;
+  }
+  .logoTitle {
+    position: absolute;
+    left: 120px;
+
+    .titleBold {
+      color: #393e46;
+
+      font-family: "Montserrat";
+      font-weight: 700;
+      font-size: 17px;
+    }
+
+    .titleThin {
+      color: #75787e;
+
+      font-family: "Montserrat";
+      font-weight: 500;
+      font-size: 17px;
+    }
+  }
+}

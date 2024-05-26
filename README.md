@@ -63,3 +63,28 @@ The production build will generate client and server modules by running both cli
 ```shell
 npm run build # or `yarn build`
 ```
+
+## Static Site Generator (Node.js)
+
+```shell
+npm run build.server
+```
+
+## Node Server
+
+This app has a minimal zero-dependencies server. Using the built-in `http.createServer` API.
+This should be faster and less overhead than Express or other frameworks.
+
+After running a full build, you can preview the build using the command:
+
+```
+npm run serve
+```
+
+Then visit [http://localhost:8080/](http://localhost:8080/)
+
+## Static Site Generator (Node.js)
+
+```shell
+npm run build.static
+```

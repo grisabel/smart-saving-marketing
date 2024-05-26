@@ -6,9 +6,15 @@ import {
 } from "@builder.io/qwik-city";
 import { RouterHead } from "./components/router-head/router-head";
 
-import "./global.css";
+import "./styles/global.scss";
+
+import { useQwikSpeak } from "qwik-speak";
+import { config } from "./speak-config";
+import { translationFn } from "./speak-functions";
 
 export default component$(() => {
+  useQwikSpeak({ config, translationFn });
+
   /**
    * The root of a QwikCity site always start with the <QwikCityProvider> component,
    * immediately followed by the document's <head> and <body>.
@@ -21,6 +27,7 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <link rel="manifest" href="/manifest.json" />
+        <title>Smart Savings</title>
         <RouterHead />
       </head>
       <body lang="en">
